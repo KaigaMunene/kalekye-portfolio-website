@@ -7,18 +7,18 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         {/* Navigation Links */}
         <nav className="flex flex-col md:flex-row justify-between md:justify-around gap-4 text-lg mb-4">
-          <Link to="/" className="hover:underline">
+          <a href="#home" className="hover:underline">
             Home
-          </Link>
-          <Link to="/about" className="hover:underline">
+          </a>
+          <a href="#about" className="hover:underline">
             About
-          </Link>
-          <Link to="/own-your-mic" className="hover:underline">
+          </a>
+          <a href="#ownYourMic" className="hover:underline">
             Own Your Mic
-          </Link>
-          <Link to="/podcast" className="hover:underline">
+          </a>
+          <a href="#podcast" className="hover:underline">
             Podcast
-          </Link>
+          </a>
           <Link to="/contact" className="hover:underline">
             Contact
           </Link>

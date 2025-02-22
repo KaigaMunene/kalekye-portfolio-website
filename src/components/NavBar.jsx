@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import whiteLogo from '../assets/images/icon_white.png';
 import blackLogo from '../assets/images/icon_black.png';
+import Contact from './ContactModal';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +13,6 @@ const Navbar = () => {
     'home',
     'about',
     'own-your-mic',
-    'services',
     'podcast',
     'contact',
   ];
@@ -82,7 +82,7 @@ const Navbar = () => {
             } hover:border-brown hover:text-black hover:bg-smoke_grey`}
             onClick={handleLinkClick}
           >
-            Contact Us
+            <Contact />
           </Link>
         </div>
 

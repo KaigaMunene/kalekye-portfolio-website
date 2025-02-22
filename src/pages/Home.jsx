@@ -5,7 +5,6 @@ import OwnYourMic from './OwnYourMic';
 import WhatIOffer from './WhatIOffer';
 import Conversations from './Conversations';
 import TestimonialSlider from './Testimonial';
-import Contact from './Contact';
 
 function Home() {
   return (
@@ -18,7 +17,6 @@ function Home() {
         <WhatIOffer />
         <Conversations />
         <TestimonialSlider />
-        <Contact />
       </div>
     </section>
   );
