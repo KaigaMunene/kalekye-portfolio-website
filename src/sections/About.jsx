@@ -1,14 +1,16 @@
 import Carousel from '../components/Carousel';
-import one from '../assets/images/podcast-1.jpeg';
-import two from '../assets/images/apva-award.webp';
-import three from '../assets/images/bts-onset.webp';
-import empowerOne from '../assets/images/empower-1.jpg';
-import empowerTwo from '../assets/images/empower-2.jpg';
-import empowerThree from '../assets/images/empower-3.jpg';
-import voiceoverTwo from '../assets/images/voiceover-2.jpg';
-import voiceoverThree from '../assets/images/voiceover-3.webp';
+import one from '../assets/images/podcast-1.png';
+import two from '../assets/images/apva-award.png';
+import three from '../assets/images/bts-onset.png';
+import empowerOne from '../assets/images/empower-1.png';
+import empowerTwo from '../assets/images/empower-2.png';
+import empowerThree from '../assets/images/empower-3.png';
+import VoiceoverOne from '../assets/images/Grid-1.png';
+import voiceoverTwo from '../assets/images/Grid-2.png';
+import voiceoverThree from '../assets/images/Grid-3.png';
 
 const voiceImages = [
+  { src: VoiceoverOne, alt: 'Event hosting' },
   { src: voiceoverTwo, alt: 'Podcasting' },
   { src: voiceoverThree, alt: 'Voiceover recording' },
 ];
@@ -18,8 +20,8 @@ const talkImages = [
   { src: three, alt: 'Voiceover recording' },
 ];
 const empowerImages = [
-  { src: empowerOne, alt: 'Event hosting' },
   { src: empowerTwo, alt: 'Podcasting' },
+  { src: empowerOne, alt: 'Event hosting' },
   { src: empowerThree, alt: 'Voiceover recording' },
 ];
 

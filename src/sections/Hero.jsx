@@ -1,35 +1,34 @@
-import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import hero from '../assets/images/about.jpg';
-import Mic from '../assets/images/own-your-mic.jpeg'
-import Book from '../assets/images/book-a-consultation.png'
-import Join from '../assets/images/podcast-1.jpeg'
-import Hire from '../assets/images/voiceover-service.jpg'
+import hero from '../assets/images/hero.png';
+import Mic from '../assets/images/own-your-mic.jpeg';
+import Book from '../assets/images/book-a-consultation.png';
+import Join from '../assets/images/podcast-1.jpeg';
+import Hire from '../assets/images/voiceover-service.jpg';
 
 const programs = [
   {
     title: 'Own Your Mic Program',
     image: Mic,
-    link: '/ownYourMic',
-    buttonText: 'Join the Own Your Mic Programs',
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSfrCvQgpZ4f4d5LEjgYm0eSZT-4-fhslhTlX3B0-RqWOf2CKA/viewform?usp=header',
+    buttonText: 'Join the Own Your Mic Program',
   },
   {
     title: 'Book Kalekye for Your Event',
     image: Book,
-    link: '/event',
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSfrCvQgpZ4f4d5LEjgYm0eSZT-4-fhslhTlX3B0-RqWOf2CKA/viewform?usp=header',
     buttonText: 'Book Kalekye for Your Event',
   },
   {
     title: 'Hire Kalekye to Voice Your Script',
     image: Hire,
-    link: '/voice',
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSfrCvQgpZ4f4d5LEjgYm0eSZT-4-fhslhTlX3B0-RqWOf2CKA/viewform?usp=header',
     buttonText: 'Hire Kalekye to Voice Your Script',
   },
   {
     title: 'Conversations with Kalekye',
     image: Join,
-    link: '/podcast',
+    link: 'https://open.spotify.com/show/4oWZvTW6T3hOISr0mMlGEu?si=dacf9828831743dd',
     buttonText: 'Listen to Conversations with Kalekye',
   },
 ];
@@ -50,74 +49,68 @@ const HeroSection = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 5000);
+    const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
   }, [currentIndex]);
 
   return (
     <section
-      className="relative hero h-screen pt-10 font-forum"
-      style={{
-        backgroundImage: `url(${hero})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
+      className="relative h-screen flex flex-col items-center justify-center px-6 md:px-12 font-forum bg-cover bg-center"
+      style={{ backgroundImage: `url(${hero})` }}
     >
-      <div className="absolute inset-0 bg-black opacity-40"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-20"></div>
 
-      <div className="relative flex flex-col lg:flex-row items-center lg:justify-between h-full px-6 md:px-12 pb-16 lg:pb-0">
-        <div className="hero-left-content w-full lg:w-1/2 mt-12 md:mt-20 lg:mt-32 text-center lg:text-left">
-          <div className="hero-text-container text-white">
-            <h1 className="text-xl sm:text-2xl md:text-4xl font-extrabold leading-tight mb-4">
-              Unleash the Power of Your Voice <br />
-              <span className="text-lg sm:text-xl md:text-2xl font-fraunces">
-                with Kalekye Mumo
-              </span>
-            </h1>
-            <h2 className="text-sm sm:text-base md:text-lg font-light">
-              Award-Winning Podcaster | Renowned Host | Voiceover Artist |{' '}
-              <br />
-              Creator of Own Your Mic Programs
-            </h2>
-          </div>
+      <div className="flex flex-col md:flex-row items-center md:justify-between w-full px-4 gap-10 md:gap-0">
+        {/* Left Section (Text) */}
+        <div className="relative text-center md:text-left text-white w-full md:w-1/2">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight mb-4">
+            Unleash the Power of Your Voice <br />
+            <span className="text-lg sm:text-xl md:text-2xl font-fraunces">
+              with Kalekye Mumo
+            </span>
+          </h1>
+          <h2 className="text-sm sm:text-base md:text-lg font-light">
+            Award-Winning Podcaster | Renowned Host | Voiceover Artist <br />
+            Creator of Own Your Mic Program
+          </h2>
         </div>
 
-        {/* Right Content (Carousel) */}
-        <div className="hero-right-content w-full lg:w-4/5 lg:max-w-md mt-10 md:mt-16 lg:mt-32 flex flex-col lg:items-center relative items-center justify-center">
-          <h1 className="text-2xl font-bold mb-4 text-white text-center">
-            My Programs
-          </h1>
-          <div className="relative w-full md:w-80 h-80 bg-black bg-opacity-20 rounded-xl flex flex-col items-center">
+        {/* Right Section (Carousel) */}
+        <div className="relative flex flex-col items-center">
+          <h2 className="text-lg md:text-2xl font-bold mb-4 text-white text-center">
+            My Services
+          </h2>
+          <div className="relative w-full bg-black bg-opacity-30 rounded-xl flex flex-col items-center p-4">
             <img
               src={programs[currentIndex].image}
               alt={programs[currentIndex].title}
-              className="w-full h-64 object-contain"
+              className="w-full h-48 md:h-64 object-contain rounded-lg transition-transform duration-300 ease-in-out"
             />
-            <Link
-              to={programs[currentIndex].link}
-              className="mt-4 bg-weird_grey text-black text-center px-4 py-2 rounded-full text-sm md:text-base hover:bg-gold hover:text-white transition"
+            <a
+              href={programs[currentIndex].link}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-4 bg-weird_grey text-black px-4 py-2 md:px-6 md:py-3 rounded-full text-xs md:text-sm lg:text-base hover:bg-gold hover:text-white transition"
             >
               {programs[currentIndex].buttonText}
-            </Link>
+            </a>
             <button
               onClick={prevSlide}
-              className="absolute left-2 top-1/2 transform -translate-y-1/2 text-white"
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 text-white text-xs md:text-base"
             >
-              <FaChevronLeft size={24} />
+              <FaChevronLeft size={20} />
             </button>
             <button
               onClick={nextSlide}
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white"
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white text-xs md:text-base"
             >
-              <FaChevronRight size={24} />
+              <FaChevronRight size={20} />
             </button>
           </div>
         </div>
       </div>
 
-      <p className="absolute bottom-4 lg:bottom-10 left-1/2 transform -translate-x-1/2 text-white text-xs md:text-sm lg:text-lg font-light opacity-80">
+      <p className="absolute bottom-4 lg:bottom-10 text-white text-xs md:text-sm lg:text-lg font-light opacity-80 text-center">
         Empowering Voices, Transforming Lives
       </p>
     </section>

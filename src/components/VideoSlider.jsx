@@ -56,11 +56,11 @@ const VideoSlider = () => {
 
   return (
     <section
-      className="py-12 bg-cream border border-solid shadow-md m-8"
+      className="py-8 bg-cream border border-solid shadow-md m-8"
       aria-labelledby="video-slider-section"
     >
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-3xl font-semibold mb-8" id="video-slider-section">
+        <h2 className="text-3xl font-semibold mb-2" id="video-slider-section">
           Featured Videos
         </h2>
         <Slider {...settings}>
