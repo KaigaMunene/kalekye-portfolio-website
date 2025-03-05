@@ -9,14 +9,11 @@ import Navbar from './components/NavBar';
 
 import ScrollToTop from './components/ScrollToTop';
 
-const Contact = React.lazy(() => import('./components/ContactModal'));
 const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./sections/About'));
+const About = React.lazy(() => import('./pages/About'));
 const OwnYourMic = React.lazy(() => import('./pages/OwnYourMic'));
-const WorkWithUs = React.lazy(() => import('./pages/WorkWithUs'));
-const WhatIOffer = React.lazy(() => import('./pages/WhatIOffer'));
 const Podcast = React.lazy(() => import('./pages/Podcast'));
-const VoiceOver = React.lazy(() => import('./sections/VoiceOver'));
+const Contact = React.lazy(() => import('./pages/Contact'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicies'));
 
@@ -27,18 +24,11 @@ function App() {
         <Navbar />
         <ScrollToTop />
         <Routes>
-          <Route path="/" id="home" element={<Home />} />
-          <Route path="/about" id="about" element={<About />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/ownYourMic" element={<OwnYourMic />} />
-          <Route path="/workWithUs" id="workWithUs" element={<WorkWithUs />} />
-          <Route path="/whatIOffer" id="whatIOffer" element={<WhatIOffer />} />
-          <Route path="/podcast" id="podcast" element={<Podcast />} />
-          <Route
-            path="/own-your-mic/voice_over_program"
-            id="voice"
-            element={<VoiceOver />}
-          />
-          <Route path="/contact" id="contact" element={<Contact />} />
+          <Route path="/podcast" element={<Podcast />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
