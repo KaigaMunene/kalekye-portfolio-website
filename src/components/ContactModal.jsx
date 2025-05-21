@@ -41,7 +41,13 @@ const ContactModal = () => {
 
     setFormErrors({});
     setIsFormSubmitted(true);
-    setFormData({ firstName: '', lastName: '', email: '', service: '', message: '' });
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      service: '',
+      message: '',
+    });
     setTimeout(() => setIsFormSubmitted(false), 5000);
   };
 
@@ -81,16 +87,36 @@ const ContactModal = () => {
               </p>
               <h2 className="font-semibold text-xl mb-2">Follow Us:</h2>
               <div className="flex space-x-4">
-                <a href="https://www.instagram.com/kalekyemumo/" className="text-dark hover:text-white">
+                <a
+                  href="https://www.instagram.com/kalekyemumo/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-dark hover:text-white"
+                >
                   <FaInstagram size={24} />
                 </a>
-                <a href="https://www.linkedin.com/in/kalekye-mumo-71591139/" className="text-dark hover:text-white">
+                <a
+                  href="https://www.linkedin.com/in/kalekye-mumo-71591139/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-dark hover:text-white"
+                >
                   <FaLinkedin size={24} />
                 </a>
-                <a href="https://www.youtube.com/@conversationswithkalekye" className="text-dark hover:text-white">
+                <a
+                  href="https://www.youtube.com/@conversationswithkalekye"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-dark hover:text-white"
+                >
                   <FaYoutube size={24} />
                 </a>
-                <a href="https://www.facebook.com/kalekyemumo.publicfigure/" className="text-dark hover:text-white">
+                <a
+                  href="https://www.facebook.com/kalekyemumo.publicfigure/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-dark hover:text-white"
+                >
                   <FaFacebook size={24} />
                 </a>
               </div>

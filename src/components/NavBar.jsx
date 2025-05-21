@@ -21,13 +21,17 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed w-full z-10 transition duration-300 ${
-        isScrolled ? 'bg-cream shadow-md' : 'bg-inherit'
+        isScrolled ? 'bg-cream shadow-md' : 'bg-black bg-opacity-10'
       }`}
     >
       <div className="container mx-auto px-4 py-3 flex justify-between items-center h-20">
         {/* Logo */}
         <Link to="/" className="cursor-pointer" onClick={handleLinkClick}>
-          <img src={isScrolled ? blackLogo : whiteLogo} alt="Logo" className="h-16" />
+          <img
+            src={isScrolled ? blackLogo : whiteLogo}
+            alt="Logo"
+            className="h-16"
+          />
         </Link>
 
         {/* Desktop Menu */}
@@ -53,7 +57,7 @@ const Navbar = () => {
           </Link>
 
           <Link
-            to="/own-your-mic"
+            to="/ownYourMic"
             className={`cursor-pointer transition font-medium ${
               isScrolled ? 'text-gray-700' : 'text-white'
             } hover:underline decoration-2 hover:text-gold`}
@@ -61,7 +65,6 @@ const Navbar = () => {
           >
             Own Your Mic
           </Link>
-
 
           <Link
             to="/services"
@@ -84,16 +87,16 @@ const Navbar = () => {
           </Link>
 
           {/* Contact Us Button */}
-          <Link
+          <div
+            onClick={handleLinkClick}
             className={`border px-6 py-2 rounded-lg transition cursor-pointer font-medium ${
               isScrolled
                 ? 'border-gray-700 text-gray-700'
                 : 'border-white text-white'
             } hover:border-brown hover:text-black hover:bg-smoke_grey`}
-            onClick={handleLinkClick}
           >
-            <Contact />
-          </Link>
+            < Contact />
+          </div>
         </div>
 
         {/* Mobile Menu Toggle */}

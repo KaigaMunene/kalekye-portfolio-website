@@ -77,9 +77,6 @@ const HeroSection = () => {
 
         {/* Right Section (Carousel) */}
         <div className="relative flex flex-col items-center">
-          <h2 className="text-lg md:text-2xl font-bold mb-4 text-white text-center">
-            My Services
-          </h2>
           <div className="relative w-full bg-black bg-opacity-30 rounded-xl flex flex-col items-center p-4">
             <img
               src={programs[currentIndex].image}
