@@ -14,6 +14,7 @@ const About = React.lazy(() => import('./pages/About'));
 const OwnYourMic = React.lazy(() => import('./pages/OwnYourMic'));
 const Podcast = React.lazy(() => import('./pages/Podcast'));
 const Contact = React.lazy(() => import('./pages/Contact'));
+const Services = React.lazy(() => import('./pages/Services'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicies'));
 
@@ -31,7 +32,8 @@ function App() {
             <Route path="/ownYourMic" element={<OwnYourMic />} />
             <Route path="/podcast" element={<Podcast />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/terms" element={<Terms />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/terms-of-service" element={<Terms />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
           <Footer />
