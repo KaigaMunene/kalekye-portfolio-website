@@ -12,6 +12,7 @@ export default {
         brown: '#705748',
         weird_grey: "#C2C1BF",
         cream: "#E5E0DA",
+        nav: "#213138"
       },
       fontFamily: {
         'forum': ['Forum', 'serif'],

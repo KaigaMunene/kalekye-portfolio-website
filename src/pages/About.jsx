@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import Carousel from '../components/Carousel';
 import one from '../assets/images/podcast-1.png';
 import two from '../assets/images/apva-award.png';
@@ -14,11 +15,13 @@ const voiceImages = [
   { src: voiceoverTwo, alt: 'Podcasting' },
   { src: voiceoverThree, alt: 'Voiceover recording' },
 ];
+
 const talkImages = [
   { src: one, alt: 'Event hosting' },
   { src: two, alt: 'Podcasting' },
   { src: three, alt: 'Voiceover recording' },
 ];
+
 const empowerImages = [
   { src: empowerTwo, alt: 'Podcasting' },
   { src: empowerOne, alt: 'Event hosting' },
@@ -27,10 +30,22 @@ const empowerImages = [
 
 const AboutPage = () => {
   return (
-    <section>
-      <div className="min-h-screen bg-gray-100 text-gray-800">
-        <header className="bg-gold text-white py-12">
-          <div className="container mx-auto px-4 text-center">
+    <>
+      <Helmet>
+        <title>About - Kalekye Mumo</title>
+        <meta
+          name="description"
+          content="Meet Kalekye Mumo, a media personality, mentor, and voiceover artist transforming lives through her voice and expertise."
+        />
+        <meta
+          name="keywords"
+          content="Kalekye Mumo, Voiceover, Podcasting, Event Hosting, KM Network"
+        />
+      </Helmet>
+
+      <section className="min-h-screen bg-gray-100 text-gray-800 pt-20">
+        <header className="bg-gold text-white py-12 text-center">
+          <div className="container mx-auto px-4">
             <h1 className="text-4xl font-bold mb-4">
               A Voice That Inspires, A Mentor That Transforms
             </h1>
@@ -40,12 +55,11 @@ const AboutPage = () => {
           </div>
         </header>
 
-        <main className="container mx-auto px-4 py-12 font-forum">
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-center mb-6">
-              Meet Kalekye Mumo
-            </h2>
-            <p className="text-lg leading-relaxed text-center max-w-3xl mx-auto">
+        <main className="container mx-auto px-4 py-12">
+          {/* Meet Kalekye Section */}
+          <section className="mb-12 text-center">
+            <h2 className="text-3xl font-bold mb-6">Meet Kalekye Mumo</h2>
+            <p className="text-lg leading-relaxed max-w-3xl mx-auto">
               With over 15 years in Kenyan mainstream media, I’ve earned the
               title Queen of Media for my ability to captivate audiences through
               dynamic communication. As a celebrated event host, panel
@@ -56,8 +70,9 @@ const AboutPage = () => {
             </p>
           </section>
 
-          <section className="flex flex-col-reverse md:flex-col-reverse lg:flex-row items-center gap-6 mb-12">
-            <div className="w-full md:w-1/2 text-center md:text-left">
+          {/* Empowering Through KM Network */}
+          <section className="flex flex-col lg:flex-row items-center gap-6 mb-12">
+            <div className="w-full lg:w-1/2 text-center lg:text-left">
               <h3 className="text-2xl font-bold mb-4">
                 Empowering Through KM Network
               </h3>
@@ -68,16 +83,17 @@ const AboutPage = () => {
                 into memorable experiences.
               </p>
             </div>
-            <div className="w-full md:w-1/2 rounded-lg overflow-hidden shadow-lg">
+            <div className="w-full lg:w-1/2 rounded-lg overflow-hidden shadow-lg">
               <Carousel images={empowerImages} />
             </div>
           </section>
 
-          <section className="flex flex-col md:flex-col lg:flex-row items-center gap-6 mb-12">
-            <div className="w-full md:w-1/2 rounded-lg overflow-hidden shadow-lg">
+          {/* Conversations with Kalekye */}
+          <section className="flex flex-col lg:flex-row items-center gap-6 mb-12">
+            <div className="w-full lg:w-1/2 rounded-lg overflow-hidden shadow-lg">
               <Carousel images={talkImages} />
             </div>
-            <div className="w-full md:w-1/2 text-center md:text-left">
+            <div className="w-full lg:w-1/2 text-center lg:text-left">
               <h3 className="text-2xl font-bold mb-4">
                 Conversations with Kalekye
               </h3>
@@ -90,8 +106,9 @@ const AboutPage = () => {
             </div>
           </section>
 
-          <section className="flex flex-col-reverse md:flex-col-reverse lg:flex-row items-center gap-6 mb-12">
-            <div className="w-full md:w-1/2 text-center md:text-left">
+          {/* Voiceover Excellence */}
+          <section className="flex flex-col lg:flex-row items-center gap-6 mb-12">
+            <div className="w-full lg:w-1/2 text-center lg:text-left">
               <h3 className="text-2xl font-bold mb-4">Voiceover Excellence</h3>
               <p className="text-lg leading-relaxed">
                 My voiceover work has brought life to documentaries,
@@ -99,13 +116,13 @@ const AboutPage = () => {
                 local and international brands.
               </p>
             </div>
-            <div className="w-full md:w-1/2 rounded-lg overflow-hidden shadow-lg">
+            <div className="w-full lg:w-1/2 rounded-lg overflow-hidden shadow-lg">
               <Carousel images={voiceImages} />
             </div>
           </section>
         </main>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

@@ -10,25 +10,25 @@ const programs = [
   {
     title: 'Own Your Mic Program',
     image: Mic,
-    link: 'https://docs.google.com/forms/d/e/1FAIpQLSfrCvQgpZ4f4d5LEjgYm0eSZT-4-fhslhTlX3B0-RqWOf2CKA/viewform?usp=header',
+    link: '/own-your-mic',
     buttonText: 'Join the Own Your Mic Program',
   },
   {
     title: 'Book Kalekye for Your Event',
     image: Book,
-    link: 'https://docs.google.com/forms/d/e/1FAIpQLSfrCvQgpZ4f4d5LEjgYm0eSZT-4-fhslhTlX3B0-RqWOf2CKA/viewform?usp=header',
+    link: '/contact',
     buttonText: 'Book Kalekye for Your Event',
   },
   {
     title: 'Hire Kalekye to Voice Your Script',
     image: Hire,
-    link: 'https://docs.google.com/forms/d/e/1FAIpQLSfrCvQgpZ4f4d5LEjgYm0eSZT-4-fhslhTlX3B0-RqWOf2CKA/viewform?usp=header',
+    link: '/services',
     buttonText: 'Hire Kalekye to Voice Your Script',
   },
   {
     title: 'Conversations with Kalekye',
     image: Join,
-    link: 'https://open.spotify.com/show/4oWZvTW6T3hOISr0mMlGEu?si=dacf9828831743dd',
+    link: '/podcast',
     buttonText: 'Listen to Conversations with Kalekye',
   },
 ];
@@ -77,9 +77,6 @@ const HeroSection = () => {
 
         {/* Right Section (Carousel) */}
         <div className="relative flex flex-col items-center">
-          <h2 className="text-lg md:text-2xl font-bold mb-4 text-white text-center">
-            My Services
-          </h2>
           <div className="relative w-full bg-black bg-opacity-30 rounded-xl flex flex-col items-center p-4">
             <img
               src={programs[currentIndex].image}

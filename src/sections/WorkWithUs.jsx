@@ -52,7 +52,7 @@ const WorkWithUs = () => {
                 this empowering program.
               </p>
               <a
-                href="#own-your-mic"
+                href="/own-your-mic"
                 className="mt-auto px-6 py-3 bg-gold text-white font-medium rounded-lg hover:bg-blackberry transition duration-300"
                 aria-label="Join the Own Your Mic Program"
               >
@@ -74,7 +74,7 @@ const WorkWithUs = () => {
                 Let’s discuss your goals and how we can work together to achieve them.
               </p>
               <a
-                href="#book-consultation"
+                href="/contact"
                 className="mt-auto px-6 py-3 bg-gold text-white font-medium rounded-lg hover:bg-blackberry transition duration-300"
                 aria-label="Book a Consultation"
               >
@@ -96,7 +96,9 @@ const WorkWithUs = () => {
                 Stay inspired and informed by subscribing to Kalekye Mumo’s engaging podcast series.
               </p>
               <a
-                href="#subscribe-podcast"
+                href="https://open.spotify.com/show/4oWZvTW6T3hOISr0mMlGEu?si=dacf9828831743dd"
+                target='_blank'
+                rel='noreferrer'
                 className="mt-auto px-6 py-3 bg-gold text-white font-medium rounded-lg hover:bg-blackberry transition duration-300"
                 aria-label="Subscribe to the Podcast"
               >

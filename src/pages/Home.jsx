@@ -1,14 +1,14 @@
 import Hero from '../sections/Hero';
-import About from '../sections/About';
-import WorkWithUs from './WorkWithUs';
-import OwnYourMic from './OwnYourMic';
-import WhatIOffer from './WhatIOffer';
-import Conversations from './Conversations';
-import TestimonialSlider from './Testimonial';
+import About from '../sections/About.jsx';
+import WorkWithUs from '../sections/WorkWithUs';
+import OwnYourMic from '../sections/Programs.jsx';
+import WhatIOffer from '../sections/WhatIOffer';
+import Conversations from '../sections/Conversations';
+import TestimonialSlider from '../sections/Testimonial';
 
 function Home() {
   return (
-    <section id="home">
+    <section>
       <div>
         <Hero />
         <About />

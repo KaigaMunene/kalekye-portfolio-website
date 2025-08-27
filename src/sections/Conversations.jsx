@@ -2,7 +2,6 @@ const PodcastSection = () => {
   return (
     <section
       className="bg-gray-50 py-12 px-6"
-      id="podcast"
       aria-labelledby="podcast-heading"
     >
       {/* Headline Section */}
