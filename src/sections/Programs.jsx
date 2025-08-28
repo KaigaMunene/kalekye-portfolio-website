@@ -5,22 +5,22 @@ import VideoSlider from '../components/VideoSlider';
 
 const OwnYourMicPrograms = () => {
   return (
-    <div className="font-forum">
+    <div className="bg-weird_grey font-forum">
       {/* Hero Section */}
       <section
         id="own-your-mic"
-        className="bg-gold text-white text-center py-12 px-6"
+        className="bg-weird_grey text-dark text-center pt-12 px-6"
       >
         <h1 className="text-3xl md:text-5xl font-extrabold mb-4">
           Master the Art of Communication with Own Your Mic
         </h1>
-        <p className="text-lg md:text-xl font-light max-w-3xl mx-auto">
+        <p className="text-lg md:text-xl pb-4 font-light max-w-3xl mx-auto">
           Empowering Individuals to Host, Speak, and Deliver with Confidence
         </p>
       </section>
 
       {/* Feature Section */}
-      <section className="bg-cream py-12 px-6">
+      <section className="bg-weird_grey pb-12 px-6">
         <div className="container mx-auto">
           <h2 className="text-2xl md:text-4xl font-bold text-center mb-8">
             Programs Overview
@@ -79,7 +79,7 @@ const OwnYourMicPrograms = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="bg-cream text-black text-center py-6 px-6">
+      <section className=" text-black text-center py-6 px-6">
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Transform Your Communication Skills?
