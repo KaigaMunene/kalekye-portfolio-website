@@ -8,7 +8,7 @@ import 'slick-carousel/slick/slick-theme.css';
 const PrevArrow = ({ className, onClick }) => {
   return (
     <button
-      className={`${className} slick-prev absolute left-0 md:left-[-30px] bg-black text-white text-2xl p-3 rounded-full shadow-md hover:opacity-80 transition z-10`}
+      className={`${className} slick-prev absolute left-0 md:left-[-30px] bg-black text-black text-2xl p-3 rounded-full shadow-md hover:opacity-80 transition`}
       onClick={onClick}
     >
       &#9665;
@@ -19,7 +19,7 @@ const PrevArrow = ({ className, onClick }) => {
 const NextArrow = ({ className, onClick }) => {
   return (
     <button
-      className={`${className} slick-next absolute right-0 md:right-[-30px] bg-black text-white text-2xl p-3 rounded-full shadow-md hover:opacity-80 transition z-10`}
+      className={`${className} slick-next absolute right-0 md:right-[-30px] bg-black text-black text-2xl p-3 rounded-full shadow-md hover:opacity-80 transition`}
       onClick={onClick}
     >
       &#9655;
@@ -70,10 +70,10 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <section className="py-12 w-full h-auto font-fraunces overflow-hidden">
+    <section className="pt-4 pb-12 w-full h-auto bg-gray-50 font-fraunces overflow-hidden">
       <div className="max-w-4xl mx-auto px-6 text-center relative">
-        <h2 className="text-3xl font-bold mb-4 text-gray-800">What People Are Saying</h2>
-        <h4 className='mb-4 font-semibold text-lg'>Testimonials</h4>
+        <h2 className="text-4xl font-bold mb-4 text-dark">Testimonials</h2>
+        <h4 className='mb-4 font-medium text-lg'>What people are saying about our programs</h4>
         <Slider {...settings}>
           {testimonials.map((member, index) => (
             <div key={index} className="px-4">

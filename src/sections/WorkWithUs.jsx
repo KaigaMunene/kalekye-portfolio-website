@@ -6,7 +6,7 @@ import bookConsultation from '../assets/images/book-a-consultation.png';
 const WorkWithUs = () => {
   return (
     <HelmetProvider>
-      <div className="bg-gray-50 min-h-screen py-10">
+      <div className="bg-white min-h-screen py-10">
         {/* SEO Meta Tags */}
         <Helmet>
           <title>Work With Kalekye Mumo | Create Magic Together</title>

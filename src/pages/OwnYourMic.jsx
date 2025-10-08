@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import VoiceOver from '../assets/images/voiceover.jpeg';
 import Host from '../assets/images/host-program.jpeg';
 import Public from '../assets/images/public-speaking.jpeg';
-import VideoSlider from '../components/VideoSlider';
+import VideoSlider from '../components/VideoGallery';
 import Testimonial from '../sections/Testimonial';
 
 const programs = [
@@ -51,12 +51,12 @@ const OwnYourMic = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-cream text-gray-900 py-12 px-6 md:px-16 lg:px-24 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
+      <section className=" text-dark px-6 md:px-16 lg:px-24 text-center">
+        <h1 className="text-4xl md:text-4xl font-bold leading-tight">
           Master the Art of Communication with{' '}
           <span className="text-gold">Own Your Mic Programs</span>
         </h1>
-        <p className="text-lg md:text-xl font-light max-w-3xl mx-auto">
+        <p className="text-base md:text-lg font-light max-w-3xl mx-auto">
           Empowering individuals to host, speak, and deliver with confidence.
         </p>
       </section>
@@ -101,7 +101,7 @@ const OwnYourMic = () => {
       </section>
 
       {/* Promotional Video Section */}
-      <section className="bg-gray-100 py-12 px-6">
+      <section className="bg-white py-12 px-6">
         <div className="container mx-auto">
           <h2 className="text-2xl md:text-4xl font-bold text-dark text-center mb-6">
             See the Programs in Action
@@ -112,7 +112,7 @@ const OwnYourMic = () => {
         </div>
       </section>
 
-      <div>
+      <div className='bg-gray-50'>
         <Testimonial />
       </div>
     </div>

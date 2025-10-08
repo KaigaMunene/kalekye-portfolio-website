@@ -1,16 +1,14 @@
 import hostProgram from '../assets/images/host-program.jpeg';
 import publicSpeaking from '../assets/images/public-speaking.jpeg';
 import voiceOver from '../assets/images/voiceover.jpeg';
-import VideoSlider from '../components/VideoSlider';
+import VideoSlider from '../components/VideoGallery';
+import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 
 const OwnYourMicPrograms = () => {
   return (
-    <div className="bg-weird_grey font-forum">
+    <div className="bg-gray-50 font-forum py-12">
       {/* Hero Section */}
-      <section
-        id="own-your-mic"
-        className="bg-weird_grey text-dark text-center pt-12 px-6"
-      >
+      <section id="own-your-mic" className=" text-dark text-center  px-6">
         <h1 className="text-3xl md:text-5xl font-extrabold mb-4">
           Master the Art of Communication with Own Your Mic
         </h1>
@@ -20,7 +18,7 @@ const OwnYourMicPrograms = () => {
       </section>
 
       {/* Feature Section */}
-      <section className="bg-weird_grey pb-12 px-6">
+      <section className=" pb-12 px-6">
         <div className="container mx-auto">
           <h2 className="text-2xl md:text-4xl font-bold text-center mb-8">
             Programs Overview
@@ -81,7 +79,7 @@ const OwnYourMicPrograms = () => {
       {/* Call to Action Section */}
       <section className=" text-black text-center py-6 px-6">
         <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-2xl md:text-4xl font-normal mb-6">
             Ready to Transform Your Communication Skills?
           </h2>
           <a
@@ -91,13 +89,14 @@ const OwnYourMicPrograms = () => {
             className="inline-block px-8 py-4 bg-gold text-white font-medium rounded-lg hover:bg-gold-dark transition duration-300"
             aria-label="Join Own Your Mic Programs"
           >
-            Join Own Your Mic Programs
+            Join Own Your Mic Programs{' '}
+            <MdOutlineKeyboardArrowRight className="inline-block ml-2" />
           </a>
         </div>
       </section>
 
       {/* Promotional Video Section */}
-      <section className="bg-gray-100 py-12 px-6">
+      <section className="py-6 px-6">
         <div className="container mx-auto">
           <h2 className="text-2xl md:text-4xl font-bold text-dark text-center mb-6">
             See the Programs in Action
