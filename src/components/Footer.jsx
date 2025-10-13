@@ -45,17 +45,26 @@ const Footer = () => {
             <h3 className="text-lg font-semibold underline mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="hover:opacity-70 hover:underline transition">
+                <Link
+                  to="/"
+                  className="hover:opacity-70 hover:underline transition"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:opacity-70 hover:underline transition">
+                <Link
+                  to="/about"
+                  className="hover:opacity-70 hover:underline transition"
+                >
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:opacity-70 hover:underline transition">
+                <Link
+                  to="/contact"
+                  className="hover:opacity-70 hover:underline transition"
+                >
                   Contact
                 </Link>
               </li>
@@ -67,13 +76,27 @@ const Footer = () => {
             <h3 className="text-lg font-semibold underline mb-4">Explore</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/own-your-mic" className="hover:opacity-70 hover:underline transition">
+                <Link
+                  to="/own-your-mic"
+                  className="hover:opacity-70 hover:underline transition"
+                >
                   Own Your Mic
                 </Link>
               </li>
               <li>
-                <Link to="/podcast" className="hover:opacity-70 hover:underline transition">
+                <Link
+                  to="/podcast"
+                  className="hover:opacity-70 hover:underline transition"
+                >
                   Podcast
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="hover:opacity-70 hover:underline transition"
+                >
+                  Services
                 </Link>
               </li>
             </ul>
@@ -84,12 +107,18 @@ const Footer = () => {
             <h3 className="text-lg font-semibold underline mb-4">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/terms-and-conditions" className="hover:opacity-70 hover:underline transition">
+                <Link
+                  to="/terms-and-conditions"
+                  className="hover:opacity-70 hover:underline transition"
+                >
                   Terms & Conditions
                 </Link>
               </li>
               <li>
-                <Link to="/privacy-policy" className="hover:opacity-70 hover:underline transition">
+                <Link
+                  to="/privacy-policy"
+                  className="hover:opacity-70 hover:underline transition"
+                >
                   Privacy Policy
                 </Link>
               </li>

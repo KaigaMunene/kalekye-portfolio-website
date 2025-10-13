@@ -1,15 +1,19 @@
-import { useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion'; // ✅ install if not already: pnpm add framer-motion
 import hero from '../assets/images/hero.png';
 import About from '../sections/About';
 
 const HeroSection = () => {
-  const nextSectionRef = useRef(null);
-
   const scrollToNext = () => {
-    if (nextSectionRef.current) {
-      nextSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    const aboutSection = document.getElementById('about-section');
+    if (aboutSection) {
+      const elementPosition = aboutSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - 100; // 100px offset for navbar
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
     }
   };
 
@@ -60,7 +64,7 @@ const HeroSection = () => {
       </section>
 
       {/* Next Section */}
-      <section ref={nextSectionRef}>
+      <section>
         <About />
       </section>
     </div>

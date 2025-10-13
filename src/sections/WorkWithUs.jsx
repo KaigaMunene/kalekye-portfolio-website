@@ -1,12 +1,28 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { motion } from 'framer-motion';
 import ownYourMic from '../assets/images/own-your-mic.jpeg';
 import subscribePodcast from '../assets/images/podcast-1.jpeg';
 import bookConsultation from '../assets/images/book-a-consultation.png';
 
+// Animation variants for WorkWithUs component cards
+const cardVariants = {
+  hidden: { opacity: 0, y: 20, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      ease: [0.25, 0.46, 0.45, 0.94],
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 const WorkWithUs = () => {
   return (
     <HelmetProvider>
-      <div className="bg-white min-h-screen py-10">
+      <div className="min-h-screen py-10">
         {/* SEO Meta Tags */}
         <Helmet>
           <title>Work With Kalekye Mumo | Create Magic Together</title>
@@ -19,7 +35,10 @@ const WorkWithUs = () => {
             content="Kalekye Mumo, Own Your Mic, consultations, podcast, work with Kalekye"
           />
           <meta name="author" content="Kalekye Mumo" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
         </Helmet>
 
         {/* Container */}
@@ -36,9 +55,18 @@ const WorkWithUs = () => {
           </div>
 
           {/* Options Section */}
-          <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3">
+          <motion.div
+            className="grid gap-8 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3"
+            variants={cardVariants}
+            initial="hidden"
+            animate="visible"
+          >
             {/* Option 1: Own Your Mic Program */}
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl hover:scale-105 transform transition duration-300 flex flex-col items-center p-6">
+            <motion.div
+              className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl hover:scale-105 transform transition duration-300 flex flex-col items-center p-6"
+              whileHover={{ scale: 1.05, y: -5 }}
+              whileTap={{ scale: 0.98 }}
+            >
               <img
                 src={ownYourMic}
                 alt="Own your mic advert"
@@ -58,10 +86,14 @@ const WorkWithUs = () => {
               >
                 Learn More
               </a>
-            </div>
+            </motion.div>
 
             {/* Option 2: Book a Consultation */}
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl hover:scale-105 transform transition duration-300 flex flex-col items-center p-6">
+            <motion.div
+              className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl hover:scale-105 transform transition duration-300 flex flex-col items-center p-6"
+              whileHover={{ scale: 1.05, y: -5 }}
+              whileTap={{ scale: 0.98 }}
+            >
               <img
                 src={bookConsultation}
                 alt="book a consultation details"
@@ -71,7 +103,8 @@ const WorkWithUs = () => {
                 Book a Consultation
               </h2>
               <p className="text-sm md:text-base text-gray-600 mb-4 text-center">
-                Let’s discuss your goals and how we can work together to achieve them.
+                Let’s discuss your goals and how we can work together to achieve
+                them.
               </p>
               <a
                 href="/contact"
@@ -80,10 +113,14 @@ const WorkWithUs = () => {
               >
                 Get Started
               </a>
-            </div>
+            </motion.div>
 
             {/* Option 3: Subscribe to the Podcast */}
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl hover:scale-105 transform transition duration-300 flex flex-col items-center p-6">
+            <motion.div
+              className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl hover:scale-105 transform transition duration-300 flex flex-col items-center p-6"
+              whileHover={{ scale: 1.05, y: -5 }}
+              whileTap={{ scale: 0.98 }}
+            >
               <img
                 src={subscribePodcast}
                 alt="Lets have a conversation with Kalekye"
@@ -93,19 +130,20 @@ const WorkWithUs = () => {
                 Subscribe to the Podcast
               </h2>
               <p className="text-sm md:text-base text-gray-600 mb-4 text-center">
-                Stay inspired and informed by subscribing to Kalekye Mumo’s engaging podcast series.
+                Stay inspired and informed by subscribing to Kalekye Mumo’s
+                engaging podcast series.
               </p>
               <a
                 href="https://open.spotify.com/show/4oWZvTW6T3hOISr0mMlGEu?si=dacf9828831743dd"
-                target='_blank'
-                rel='noreferrer'
+                target="_blank"
+                rel="noreferrer"
                 className="mt-auto px-6 py-3 bg-gold text-white font-medium rounded-lg hover:bg-blackberry transition duration-300"
                 aria-label="Subscribe to the Podcast"
               >
                 Subscribe Now
               </a>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </HelmetProvider>

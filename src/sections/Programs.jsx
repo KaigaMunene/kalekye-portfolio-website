@@ -1,31 +1,79 @@
+import { motion } from 'framer-motion';
 import hostProgram from '../assets/images/host-program.jpeg';
 import publicSpeaking from '../assets/images/public-speaking.jpeg';
 import voiceOver from '../assets/images/voiceover.jpeg';
 import VideoSlider from '../components/VideoGallery';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 
+// Animation variants for Programs component
+const sectionVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.25, 0.46, 0.45, 0.94],
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.4,
+      ease: [0.25, 0.46, 0.45, 0.94],
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 const OwnYourMicPrograms = () => {
   return (
-    <div className="bg-gray-50 font-forum py-12">
+    <div className="font-forum py-12">
       {/* Hero Section */}
-      <section id="own-your-mic" className=" text-dark text-center  px-6">
+      <motion.section
+        id="own-your-mic"
+        className="text-dark text-center px-6"
+        variants={sectionVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <h1 className="text-3xl md:text-5xl font-extrabold mb-4">
           Master the Art of Communication with Own Your Mic
         </h1>
         <p className="text-lg md:text-xl pb-4 font-light max-w-3xl mx-auto">
           Empowering Individuals to Host, Speak, and Deliver with Confidence
         </p>
-      </section>
+      </motion.section>
 
       {/* Feature Section */}
-      <section className=" pb-12 px-6">
+      <motion.section
+        className="pb-12 px-6"
+        variants={sectionVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <div className="container mx-auto">
           <h2 className="text-2xl md:text-4xl font-bold text-center mb-8">
             Programs Overview
           </h2>
-          <div className="grid gap-8 md:grid-cols-3">
+          <motion.div
+            className="grid gap-8 md:grid-cols-3"
+            variants={cardVariants}
+            initial="hidden"
+            animate="visible"
+          >
             {/* Host Program */}
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden p-6 flex flex-col items-center text-center hover:shadow-2xl transition duration-300">
+            <motion.div
+              className="bg-white shadow-lg rounded-lg overflow-hidden p-6 flex flex-col items-center text-center hover:shadow-2xl transition duration-300"
+              whileHover={{ scale: 1.02, y: -5 }}
+              whileTap={{ scale: 0.98 }}
+            >
               <img
                 src={hostProgram}
                 alt="Host Program - Own Your Mic"
@@ -38,10 +86,14 @@ const OwnYourMicPrograms = () => {
                 Learn to command the stage as a professional host or moderator.
                 Ideal for podcast/show hosts and panel moderators.
               </p>
-            </div>
+            </motion.div>
 
             {/* Public Speaking Program */}
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden p-6 flex flex-col items-center text-center hover:shadow-2xl transition duration-300">
+            <motion.div
+              className="bg-white shadow-lg rounded-lg overflow-hidden p-6 flex flex-col items-center text-center hover:shadow-2xl transition duration-300"
+              whileHover={{ scale: 1.02, y: -5 }}
+              whileTap={{ scale: 0.98 }}
+            >
               <img
                 src={publicSpeaking}
                 alt="Public Speaking Program - Own Your Mic"
@@ -55,10 +107,14 @@ const OwnYourMicPrograms = () => {
                 your speaking engagement. Overcome stage fear and connect with
                 any audience.
               </p>
-            </div>
+            </motion.div>
 
             {/* Voiceover Program */}
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden p-6 flex flex-col items-center text-center hover:shadow-2xl transition duration-300">
+            <motion.div
+              className="bg-white shadow-lg rounded-lg overflow-hidden p-6 flex flex-col items-center text-center hover:shadow-2xl transition duration-300"
+              whileHover={{ scale: 1.02, y: -5 }}
+              whileTap={{ scale: 0.98 }}
+            >
               <img
                 src={voiceOver}
                 alt="Voiceover Program - Own Your Mic"
@@ -71,13 +127,18 @@ const OwnYourMicPrograms = () => {
                 Discover techniques to create compelling voiceover work.
                 Tailored for commercials, documentaries, and infomercials.
               </p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Call to Action Section */}
-      <section className=" text-black text-center py-6 px-6">
+      <motion.section
+        className="text-black text-center py-6 px-6"
+        variants={sectionVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <div className="container mx-auto">
           <h2 className="text-2xl md:text-4xl font-normal mb-6">
             Ready to Transform Your Communication Skills?
@@ -93,10 +154,15 @@ const OwnYourMicPrograms = () => {
             <MdOutlineKeyboardArrowRight className="inline-block ml-2" />
           </a>
         </div>
-      </section>
+      </motion.section>
 
       {/* Promotional Video Section */}
-      <section className="py-6 px-6">
+      <motion.section
+        className="py-6 px-6"
+        variants={sectionVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <div className="container mx-auto">
           <h2 className="text-2xl md:text-4xl font-bold text-dark text-center mb-6">
             See the Programs in Action
@@ -105,7 +171,7 @@ const OwnYourMicPrograms = () => {
             <VideoSlider />
           </div>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };

@@ -95,7 +95,7 @@ const Navbar = () => {
                 : 'border-white text-white'
             } hover:border-brown hover:text-black hover:bg-smoke_grey`}
           >
-            < Contact />
+            <Contact />
           </div>
         </div>
 
@@ -112,7 +112,7 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-cream shadow-md p-4 space-y-2">
           <Link
-            to="/home"
+            to="/"
             className="block text-gray-700 px-4 py-2 rounded-md hover:bg-purple-100 transition"
             onClick={handleLinkClick}
           >

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Carousel from '../components/Carousel';
 import empowerOne from '../assets/images/empower-1.png';
 import empowerTwo from '../assets/images/empower-2.png';
@@ -16,7 +17,7 @@ const AboutPage = () => {
     <section>
       <div className="bg-white text-gray-800">
         {/* HEADER */}
-        <header className="text-gold pt-12 px-4">
+        <header className="text-gold pt-12 px-4" id="about-section">
           <div className="container mx-auto text-center">
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
               A Voice That Inspires, A Mentor That Transforms
@@ -46,13 +47,34 @@ const AboutPage = () => {
                 or live events.
               </p>
 
-              <Link
-                to="/about"
-                className="mt-6 inline-block bg-gold text-white font-semibold px-5 py-2 md:px-6 md:py-3 rounded-xl hover:bg-dark hover:text-white transition"
+              <motion.div
+                whileHover="hover"
+                whileTap={{ scale: 0.95 }}
+                initial="initial"
+                className="inline-block"
+                variants={{
+                  initial: { scale: 1 },
+                  hover: { scale: 1.05 },
+                }}
+                transition={{ duration: 0.2 }}
               >
-                Read more
-                <MdOutlineKeyboardArrowRight className="inline-block ml-2" />
-              </Link>
+                <Link
+                  to="/about"
+                  className="mt-6 inline-flex items-center bg-gold text-white font-semibold px-5 py-2 md:px-6 md:py-3 rounded-xl hover:bg-dark hover:text-white transition duration-300 group"
+                >
+                  Read more
+                  <motion.div
+                    className="ml-2"
+                    variants={{
+                      initial: { rotate: 0 },
+                      hover: { rotate: 90 },
+                    }}
+                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                  >
+                    <MdOutlineKeyboardArrowRight className="inline-block" />
+                  </motion.div>
+                </Link>
+              </motion.div>
             </div>
 
             {/* IMAGE CAROUSEL */}
