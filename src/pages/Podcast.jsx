@@ -78,7 +78,7 @@ const PodcastPage = () => {
         {/* Hero Section */}
         <motion.section
           ref={heroRef}
-          className="min-h-screen flex flex-col lg:flex-row items-center justify-between px-6 md:px-12 lg:px-20 pt-24 md:pt-28 pb-16 gap-12 lg:gap-16"
+          className="min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between px-6 md:px-12 lg:px-20 pt-24 md:pt-28 pb-16 gap-12 lg:gap-16"
           variants={containerVariants}
           initial="hidden"
           animate={heroInView ? 'visible' : 'hidden'}

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import ownYourMic from '../assets/images/own-your-mic.jpeg';
 import subscribePodcast from '../assets/images/podcast-1.jpeg';
 import bookConsultation from '../assets/images/book-a-consultation.png';
+import { Link } from 'react-router-dom';
 
 // Animation variants for WorkWithUs component cards
 const cardVariants = {
@@ -133,15 +134,13 @@ const WorkWithUs = () => {
                 Stay inspired and informed by subscribing to Kalekye Mumo’s
                 engaging podcast series.
               </p>
-              <a
-                href="https://open.spotify.com/show/4oWZvTW6T3hOISr0mMlGEu?si=dacf9828831743dd"
-                target="_blank"
-                rel="noreferrer"
+              <Link
+                to="/podcast"
                 className="mt-auto px-6 py-3 bg-gold text-white font-medium rounded-lg hover:bg-blackberry transition duration-300"
-                aria-label="Subscribe to the Podcast"
+                aria-label="Learn More about the Podcast"
               >
-                Subscribe Now
-              </a>
+                Learn More
+              </Link>
             </motion.div>
           </motion.div>
         </div>

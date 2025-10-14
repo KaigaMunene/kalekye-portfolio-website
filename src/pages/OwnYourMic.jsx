@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { useRef } from 'react';
 import VoiceOver from '../assets/images/voiceover.jpeg';
 import Host from '../assets/images/host-program.jpeg';
 import Public from '../assets/images/public-speaking.jpeg';
@@ -34,6 +35,15 @@ const programs = [
 ];
 
 const OwnYourMic = () => {
+  const programsSectionRef = useRef(null);
+
+  const scrollToPrograms = () => {
+    programsSectionRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  };
+
   return (
     <div className="bg-weird_grey min-h-screen font-antic-didone">
       {/* SEO Meta Tags */}
@@ -63,12 +73,25 @@ const OwnYourMic = () => {
             Empowering individuals to host, speak, and deliver with confidence.
             Transform your communication skills and own every stage you step on.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
-            <button className="bg-gold text-white font-semibold py-3 px-6 sm:px-8 rounded-lg hover:bg-gold/90 transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base">
-              Explore Programs
-            </button>
-            <button className="border-2 border-gold text-gold font-semibold py-3 px-6 sm:px-8 rounded-lg hover:bg-gold hover:text-white transition-all duration-300 text-sm sm:text-base">
-              Learn More
+          <div className="flex justify-center w-full">
+            <button
+              onClick={scrollToPrograms}
+              className="bg-gold text-white font-semibold py-3 px-8 rounded-lg hover:bg-gold/90 transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base flex items-center gap-2"
+            >
+              Scroll Down to Learn More
+              <svg
+                className="w-5 h-5 animate-bounce"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                />
+              </svg>
             </button>
           </div>
         </div>
@@ -89,7 +112,10 @@ const OwnYourMic = () => {
       </section>
 
       {/* Programs Section - Fully Responsive */}
-      <section className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
+      <section
+        ref={programsSectionRef}
+        className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24"
+      >
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6 sm:mb-8 lg:mb-10 underline">
           Programs Overview
         </h2>

@@ -142,7 +142,7 @@ app.post('/api/send-email', async (req, res) => {
 
     // Email content with enhanced security
     const mailOptions = {
-      from: `"${sanitizedData.firstName} ${sanitizedData.lastName}" <${process.env.EMAIL_USER}>`,
+      from: `"${sanitizedData.firstName} ${sanitizedData.lastName}" <${sanitizedData.email}>`,
       to: 'kaigamunene@gmail.com',
       replyTo: sanitizedData.email,
       subject: `New Contact Form Submission from ${sanitizedData.firstName} ${sanitizedData.lastName}`,
