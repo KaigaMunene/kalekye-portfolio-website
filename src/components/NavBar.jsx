@@ -21,7 +21,9 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed w-full z-10 transition duration-300 ${
-        isScrolled ? 'bg-cream shadow-md' : 'bg-black bg-transparent'
+        isScrolled
+          ? 'bg-cream shadow-md'
+          : 'bg-gradient-to-br from-dark via-gray-800 to-blackberry opacity-80'
       }`}
     >
       <div className="container mx-auto px-4 py-3 flex justify-between items-center h-20">
@@ -95,7 +97,7 @@ const Navbar = () => {
                 : 'border-white text-white'
             } hover:border-brown hover:text-black hover:bg-smoke_grey`}
           >
-            < Contact />
+            <Contact />
           </div>
         </div>
 
@@ -112,7 +114,7 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-cream shadow-md p-4 space-y-2">
           <Link
-            to="/home"
+            to="/"
             className="block text-gray-700 px-4 py-2 rounded-md hover:bg-purple-100 transition"
             onClick={handleLinkClick}
           >

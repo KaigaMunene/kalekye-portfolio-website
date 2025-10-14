@@ -29,7 +29,7 @@ const Terms = () => {
       <ul className="list-disc list-inside mb-4">
         <li>
           Program fees must be paid in full prior to the start date according to
-          each program’s set deadline
+          each program&apos;s set deadline
         </li>
         <li>
           Alternatively, participants may opt for the two-installment payment
